@@ -1,0 +1,37 @@
+dataset: ORGANT2
+organt2_data_dir: "/home/liuyuhan/lianaijia/organt2"
+backbone: ViT-B/16-384
+vit_depth: 10
+
+# 3D volume settings
+slab_k: 3
+height: 480
+width: 480
+
+# Training
+epochs: 15
+bs: 1
+test_bs: 1
+lr: 0.0001
+num_workers: 0
+train_n: 2000
+test_n: 500
+
+# Loss (ce for ORGANT2, no precomputed boundary weights)
+loss: ce
+pair_lossW: 0.02
+
+# Model
+bg_num: 5
+drop_rate: 0.0
+block_size: 5
+
+# DFN adapter experiment
+DFN: false
+dfn_reduction: 4
+dfn_scale: 1.0
+dfn_freeze_base: false
+
+split: 0
+tqdm: true
+
