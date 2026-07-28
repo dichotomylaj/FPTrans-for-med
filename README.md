@@ -1,4 +1,4 @@
-### Usage for inference with our pretrained models
+### Usage for inference with pretrained models
 
 Download the checkpoints of pretrained FPTrans from [GoogleDrive](https://drive.google.com/drive/folders/1leK51aSPhw7kTJzwCY1ApcMJ5JG9K2Mv?usp=share_link) or [BaiduDrive](https://pan.baidu.com/s/1v4PJJAe4EG1OwFnliAHEyQ) (Code: FPTr),
 and put the pretrained models (the numbered folders) into `./output/`.
