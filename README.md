@@ -1,50 +1,6 @@
-# FPTrans: Feature-Proxy Transformer for Few-Shot Segmentation
-
-[Jian-Wei Zhang](https://github.com/Jarvis73), Yifan Sun, Yi Yang, Wei Chen
-
-[[arXiv](https://arxiv.org/abs/2210.06908)][[Bibtex](https://github.com/Jarvis73/FPTrans#CitingFPTrans)]
-
-This repository is the **PyTorch** Implementation. One can find the PaddlePaddle implementation from [here](https://github.com/Jarvis73/FPTransPaddle).
-
-![Framework](./assets/framework.png)
-
-## Installation
-
-Create a virtual environment and install the required packages.
-
-```bash
-conda create -n fptrans python=3.9.7
-conda activate fptrans
-conda install numpy=1.21.2
-conda install pytorch==1.10.0 torchvision==0.11.1 cudatoolkit=11.3 -c pytorch
-conda install tqdm scipy pyyaml
-pip install git+https://github.com/IDSIA/sacred.git@0.8.3
-pip install dropblock pycocotools opencv-python
-```
-
-Put following bash function in `~/.bashrc` for simplifying the `CUDA_VISIBLE_DEVICES`. 
-
-```bash
-function cuda()
-{
-    if [ "$#" -eq 0 ]; then
-        return
-    fi
-    GPU_ID=$1
-    shift 1
-    CUDA_VISIBLE_DEVICES="$GPU_ID" $@
-}
-```
-
-Now we can use `cuda 0 python` for single GPU and `cuda 0,1 python` for multiple GPUs. 
-
-## Getting Started
-
-See [Preparing Datasets and Pretrained Backbones for FPTrans](./data/README.md)
-
 ### Usage for inference with our pretrained models
 
-Download the checkpoints of our pretrained FPTrans from [GoogleDrive](https://drive.google.com/drive/folders/1leK51aSPhw7kTJzwCY1ApcMJ5JG9K2Mv?usp=share_link) or [BaiduDrive](https://pan.baidu.com/s/1v4PJJAe4EG1OwFnliAHEyQ) (Code: FPTr),
+Download the checkpoints of pretrained FPTrans from [GoogleDrive](https://drive.google.com/drive/folders/1leK51aSPhw7kTJzwCY1ApcMJ5JG9K2Mv?usp=share_link) or [BaiduDrive](https://pan.baidu.com/s/1v4PJJAe4EG1OwFnliAHEyQ) (Code: FPTr),
 and put the pretrained models (the numbered folders) into `./output/`.
 
 | Datasets  | Backbone  | #Shots | Experiment ID (Split 0 - Split 3) |
